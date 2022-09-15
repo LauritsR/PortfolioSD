@@ -10,7 +10,6 @@ public class RoRo extends Vessel {
         this.laneMeters = laneMeters;
     }
 
-    public void loadingCargo(int dog) {
-
+    public void loadingCargo() {
     }
 }

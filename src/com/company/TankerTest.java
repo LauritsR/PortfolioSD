@@ -14,4 +14,12 @@ class TankerTest {
                 tanker.loadingCargo(0, 0);
           });
   }
+  @Test
+  void throwsExeptionWhenNegative(){
+      Tanker tanker = new Tanker("Denmark", 10, 10, 10, 10);
+      assertThrows(IllegalArgumentException.class,
+          () -> {
+                tanker.loadingCargo(0, -0.2);
+          });
+  }
 }

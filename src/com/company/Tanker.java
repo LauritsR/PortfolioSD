@@ -20,7 +20,7 @@ public class Tanker extends Vessel {
 
     }
 
-    void loadingCargo(int whichTank, double amountOfLiquid){
+    public void loadingCargo(int whichTank, double amountOfLiquid){
         if (amountOfLiquid <= 0) {
             throw new IllegalArgumentException("Cannot fill negative or zero amount of liquid");
         }

@@ -1,10 +1,11 @@
 package com.company;
 
+import com.company.Tanker;
 import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TankerTest {
+public class TankerTest {
 
   @Test
   void throwsExeptionWhenZero(){

@@ -67,7 +67,7 @@ public class Tanker extends Vessel {
             }
         }
         System.out.println();
-        System.out.println("The max amount of liquid is " + maxLitersOfLiquid);
+        System.out.println("The max amount of liquid allowed is " + maxLitersOfLiquid);
         System.out.println();
     }
 

@@ -53,20 +53,21 @@ public class Tanker extends Vessel {
     };
 
     void utilityLevelOfCapacity() {
+        System.out.println("Getting the statistics from the tanker from " + flagNation + " which has " + amountOfCompartmentsList.length + " tanks");
         for (int i = 0; i < amountOfCompartmentsList.length; i++) {
-            System.out.print("Tank " + (i+1) + " is filled with " + amountOfCompartmentsList[i] + "L.");
             if (amountOfCompartmentsList[i] != 0) {
-                double percentage = ((double) amountOfCompartmentsList[i]/maxLitersOfLiquid) * 100;
-                System.out.print(" Which is " + percentage + "%");
+                double percentage = ((double) amountOfCompartmentsList[i] / maxLitersOfLiquid) * 100;
+                System.out.println("Tank " + (i + 1) + " is filled with " + amountOfCompartmentsList[i] + "L." + " Which is " + percentage + "%");
             }
-            System.out.println();
         }
-        System.out.println("That means that these tanks are empty:");
+        System.out.println("These tanks are empty:");
         for (int i = 0; i < amountOfCompartmentsList.length; i++) {
             if (amountOfCompartmentsList[i] == 0) {
                 System.out.print((i+1) + " ");
             }
         }
+        System.out.println();
+        System.out.println("The max amount of liquid is " + maxLitersOfLiquid);
         System.out.println();
     }
 

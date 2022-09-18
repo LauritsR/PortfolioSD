@@ -6,22 +6,24 @@ import org.testng.annotations.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TankerTest {
-    /*
   @Test
-  void throwsExeptionWhenZero(){
-      Tanker tanker = new Tanker("Denmark", 10, 10, 10, 10);
+  void throwsExceptionWhenZeroCompartments(){
       assertThrows(IllegalArgumentException.class,
           () -> {
-                tanker.loadingCargo(0, 0);
+              Tanker tanker = new Tanker("Denmark", 10, 10, 10, 0);
+
           });
-  }
+    }
+
   @Test
-  void throwsExeptionWhenNegative(){
-      Tanker tanker = new Tanker("Denmark", 10, 10, 10, 10);
-      assertThrows(IllegalArgumentException.class,
-          () -> {
-                tanker.loadingCargo(0, -1000);
-          });
+  void returnsFalseWhenFillingNegativeAmountOfLiquid() {
+      Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+      assertFalse(tankerOne.loadingCargo(1, -3000));
+    }
+
+  @Test
+  void returnsFalseWhenFillingZeroAmountOfLiquid() {
+      Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+      assertFalse(tankerOne.loadingCargo(1, 0));
+    }
   }
-  */
-}

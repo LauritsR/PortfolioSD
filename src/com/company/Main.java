@@ -14,6 +14,10 @@ public class Main {
         tankerOne.loadingCargo(11, 1000);
         tankerOne.loadingCargo(1, 0);
         tankerOne.loadingCargo(1, -3000);
+        tankerOne.loadingCargo(1, 5000);
+        tankerOne.loadingCargo(5, 55400);
+
+        tankerOne.utilityLevelOfCapacity();
         // to do change to ints
 
 

@@ -18,8 +18,6 @@ public class Main {
         tankerOne.loadingCargo(5, 55400);
 
         tankerOne.utilityLevelOfCapacity();
-        // to do change to ints
-
 
     }
 }

@@ -5,8 +5,8 @@ public class RoRo extends Vessel {
     int truckLenghtMeters = 30;
     int laneMeters;
 
-    public RoRo(String flagNation, int draft, int lenght, int width, int laneMeters){
-        super(flagNation, draft, lenght, width);
+    public RoRo(String flagNation, int draft, int length, int width, int laneMeters){
+        super(flagNation, draft, length, width);
         this.laneMeters = laneMeters;
     }
 

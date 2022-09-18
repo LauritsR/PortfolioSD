@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Tanker extends Vessel {
     int[] amountOfCompartmentsList;
     int maxLitersOfLiquid = 1000000;
-    public Tanker(String flagNation, int draft, int lenght, int width, int amountOfCompartments){
-        super(flagNation, draft, lenght, width);
+    public Tanker(String flagNation, int draft, int length, int width, int amountOfCompartments){
+        super(flagNation, draft, length, width);
         if (amountOfCompartments > 10 || amountOfCompartments <= 0) {
             throw new IllegalArgumentException("Number not allowed: " + amountOfCompartments);
         } else {

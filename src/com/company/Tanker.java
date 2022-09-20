@@ -67,8 +67,11 @@ public class Tanker extends Vessel {
             }
         }
         System.out.println();
-        System.out.println("The max amount of liquid allowed is " + maxLitersOfLiquid);
+        System.out.println("The max amount of liquid allowed per tank is " + maxLitersOfLiquid);
         System.out.println();
+        // TO DO: add function for total amount filled in tanker
+        // total amount of liquid in all tanks (array.length x max amount of liquid) a number
+        // again, but a percentage
     }
 
     int getLiquidInTank(int whichTank){

@@ -16,6 +16,7 @@ public class Main {
         tankerOne.loadingCargo(1, -3000);
         tankerOne.loadingCargo(1, 5000);
         tankerOne.loadingCargo(5, 55400);
+        tankerOne.loadingCargo(6, 999999);
 
         tankerOne.utilityLevelOfCapacity();
 

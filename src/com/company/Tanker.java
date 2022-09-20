@@ -34,7 +34,7 @@ public class Tanker extends Vessel {
             if (amountOfCompartmentsList[whichTank] != maxLitersOfLiquid && amountOfLiquid + amountOfCompartmentsList[whichTank] < maxLitersOfLiquid) {
                 amountOfCompartmentsList[whichTank] += amountOfLiquid;
                 System.out.println("*filling " + amountOfLiquid + "L*");
-                System.out.println("Tank " + whichTank + " is filled with " + amountOfCompartmentsList[whichTank] + "L");
+                System.out.println("Tank " + (whichTank + 1) + " is filled with " + amountOfCompartmentsList[whichTank] + "L");
                 System.out.println();
                 return true;
             } else {
@@ -53,11 +53,13 @@ public class Tanker extends Vessel {
     };
 
     void utilityLevelOfCapacity() {
+        int totalAmountOfLiquid = 0;
         System.out.println("Getting the statistics from the tanker from " + flagNation + " which has " + amountOfCompartmentsList.length + " tanks");
         for (int i = 0; i < amountOfCompartmentsList.length; i++) {
             if (amountOfCompartmentsList[i] != 0) {
                 double percentage = ((double) amountOfCompartmentsList[i] / maxLitersOfLiquid) * 100;
-                System.out.println("Tank " + (i + 1) + " is filled with " + amountOfCompartmentsList[i] + "L." + " Which is " + percentage + "%");
+                System.out.println("Tank " + (i + 1) + " is filled with " + amountOfCompartmentsList[i] + "L." + " Which is " + percentage + "% filled");
+                totalAmountOfLiquid += amountOfCompartmentsList[i];
             }
         }
         System.out.println("These tanks are empty:");
@@ -68,10 +70,10 @@ public class Tanker extends Vessel {
         }
         System.out.println();
         System.out.println("The max amount of liquid allowed per tank is " + maxLitersOfLiquid);
-        System.out.println();
-        // TO DO: add function for total amount filled in tanker
-        // total amount of liquid in all tanks (array.length x max amount of liquid) a number
-        // again, but a percentage
+        System.out.println("There is " + totalAmountOfLiquid + "L out of " + (maxLitersOfLiquid*amountOfCompartmentsList.length) + "L available space");
+        double percentageAllTanks = ((double) totalAmountOfLiquid / (maxLitersOfLiquid*amountOfCompartmentsList.length)) * 100;
+        System.out.println("The tanker is in total filled " + percentageAllTanks + "%");
+        // to do: fix if you fill directly 1000000 error
     }
 
     int getLiquidInTank(int whichTank){

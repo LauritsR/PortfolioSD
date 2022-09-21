@@ -27,11 +27,11 @@ public class Tanker extends Vessel {
                 System.out.println();
                 return false;
             } else if (amountOfCompartmentsList[whichTank] == maxLitersOfLiquid) {
-                System.out.println(whichTank + " is already filled");
+                System.out.println("Tank " + (whichTank+1) + " is already filled");
                 System.out.println();
                 return false;
             }
-            if (amountOfCompartmentsList[whichTank] != maxLitersOfLiquid && amountOfLiquid + amountOfCompartmentsList[whichTank] < maxLitersOfLiquid) {
+            if (amountOfCompartmentsList[whichTank] != maxLitersOfLiquid && amountOfLiquid + amountOfCompartmentsList[whichTank] < maxLitersOfLiquid+1) {
                 amountOfCompartmentsList[whichTank] += amountOfLiquid;
                 System.out.println("*filling " + amountOfLiquid + "L*");
                 System.out.println("Tank " + (whichTank + 1) + " is filled with " + amountOfCompartmentsList[whichTank] + "L");
@@ -74,6 +74,7 @@ public class Tanker extends Vessel {
         double percentageAllTanks = ((double) totalAmountOfLiquid / (maxLitersOfLiquid*amountOfCompartmentsList.length)) * 100;
         System.out.println("The tanker is in total filled " + percentageAllTanks + "%");
         // to do: fix if you fill directly 1000000 error
+        // maybe it's a +1 somewhere
     }
 
     int getLiquidInTank(int whichTank){

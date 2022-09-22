@@ -54,12 +54,14 @@ public class Tanker extends Vessel {
 
     void utilityLevelOfCapacity() {
         int totalAmountOfLiquid = 0;
+        int filledTanks = 0;
         System.out.println("Getting the statistics from the tanker from " + flagNation + " which has " + amountOfCompartmentsList.length + " tanks");
         for (int i = 0; i < amountOfCompartmentsList.length; i++) {
             if (amountOfCompartmentsList[i] != 0) {
                 double percentage = ((double) amountOfCompartmentsList[i] / maxLitersOfLiquid) * 100;
                 System.out.println("Tank " + (i + 1) + " is filled with " + amountOfCompartmentsList[i] + "L." + " Which is " + percentage + "% filled");
                 totalAmountOfLiquid += amountOfCompartmentsList[i];
+                filledTanks += 1;
             }
         }
         System.out.println("These tanks are empty:");
@@ -73,12 +75,7 @@ public class Tanker extends Vessel {
         System.out.println("There is " + totalAmountOfLiquid + "L out of " + (maxLitersOfLiquid*amountOfCompartmentsList.length) + "L available space");
         double percentageAllTanks = ((double) totalAmountOfLiquid / (maxLitersOfLiquid*amountOfCompartmentsList.length)) * 100;
         System.out.println("The tanker is in total filled " + percentageAllTanks + "%");
-        // to do: fix if you fill directly 1000000 error
-        // maybe it's a +1 somewhere
+        System.out.println(((double) filledTanks / amountOfCompartmentsList.length * 100) + "% of the tanks have liquid");
+        System.out.println();
     }
-
-    int getLiquidInTank(int whichTank){
-        return amountOfCompartmentsList[whichTank];
-    }
-
 }

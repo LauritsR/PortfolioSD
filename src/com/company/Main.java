@@ -33,6 +33,9 @@ public class Main {
         containerTwo.loadingCargo(98);
         containerTwo.loadingCargo(2);
         containerTwo.loadingCargo(2);
+        containerTwo.utilityLevelOfCapacity();
+
+
 
     }
 }

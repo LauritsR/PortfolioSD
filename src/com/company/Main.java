@@ -29,10 +29,10 @@ public class Main {
         roroOne.loadingCargo("truck", 2);
         roroOne.utilityLevelOfCapacity();*/
 
-        Container containerTwo = new Container("Denmark", 10,10,10,100);
+        Container containerTwo = new Container("Denmark", 10,10,10,266);
         containerTwo.loadingCargo(98);
         containerTwo.loadingCargo(2);
-        containerTwo.loadingCargo(2);
+        containerTwo.loadingCargo(4);
         containerTwo.utilityLevelOfCapacity();
 
 

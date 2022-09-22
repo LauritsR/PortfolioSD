@@ -51,8 +51,8 @@ public class Tanker extends Vessel {
         }
 
     };
-
-    void utilityLevelOfCapacity() {
+    @Override
+    public void utilityLevelOfCapacity() {
         int totalAmountOfLiquid = 0;
         int filledTanks = 0;
         System.out.println("Getting the statistics from the tanker from " + flagNation + " which has " + amountOfCompartmentsList.length + " tanks");

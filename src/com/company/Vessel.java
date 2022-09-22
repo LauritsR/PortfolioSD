@@ -18,5 +18,7 @@ public abstract class Vessel {
         this.width = width;
     }
 
+    abstract public void utilityLevelOfCapacity();
+
 
 }

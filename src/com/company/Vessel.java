@@ -20,5 +20,6 @@ public abstract class Vessel {
 
     abstract public void utilityLevelOfCapacity();
 
+    // The reason loading cargo is not set here, is because it takes different parameters
 
 }

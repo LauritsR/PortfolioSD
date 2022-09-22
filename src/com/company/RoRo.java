@@ -18,7 +18,7 @@ public class RoRo extends Vessel {
     public boolean loadingCargo(String carOrTruck, int amountOfVehicles) {
         int addLength = 0;
         if (amountOfVehicles <= 0) {
-            System.out.println("Cannot load 0 or negative amount of vehicles");
+            System.out.println("Cannot load 0 or negative amount of vehicles. You said: " + amountOfVehicles);
             return false;
         }
         if (carOrTruck.equalsIgnoreCase("car")) {

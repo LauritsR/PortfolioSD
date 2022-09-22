@@ -4,12 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        /*
+
         Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
         tankerOne.loadingCargo(0, 1000);
-        //System.out.println(tanker.getLiquidInTankConverted(0) + "L");
         tankerOne.loadingCargo(0, 5000);
-        //System.out.println(tanker.getLiquidInTankConverted(0) + "L");
         tankerOne.loadingCargo(0, 1000000);
         tankerOne.loadingCargo(0, 100000);
         tankerOne.loadingCargo(11, 1000);
@@ -27,12 +25,16 @@ public class Main {
         roroOne.loadingCargo("truck", 2);
         roroOne.loadingCargo("car", 10);
         roroOne.loadingCargo("truck", 2);
-        roroOne.utilityLevelOfCapacity();*/
+        roroOne.loadingCargo("truck", -2);
+        roroOne.loadingCargo("truck", 0);
+        roroOne.utilityLevelOfCapacity();
 
         Container containerTwo = new Container("Denmark", 10,10,10,266);
         containerTwo.loadingCargo(98);
         containerTwo.loadingCargo(2);
         containerTwo.loadingCargo(4);
+        containerTwo.loadingCargo(-2);
+        containerTwo.loadingCargo(0);
         containerTwo.utilityLevelOfCapacity();
 
 

@@ -1,10 +1,10 @@
 package com.company;
 
 public abstract class Vessel {
-    String flagNation;
-    float draft;
-    int length;
-    int width;
+    public String flagNation;
+    public float draft;
+    public int length;
+    public int width;
     public Vessel(String flagNation, int draft, int length, int width) {
         if (draft <= 0 || length <= 0 || width <= 0)  {
             throw new IllegalArgumentException("Negative or zero found, not legal");

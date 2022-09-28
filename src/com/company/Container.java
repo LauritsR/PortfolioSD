@@ -1,9 +1,9 @@
 package com.company;
 
 public class Container extends Vessel {
-    int containerCapacity;
-    int loadedAmountOfContainers = 0;
-    int maxAmountOfContainers = 15000;
+    public int containerCapacity;
+    public int loadedAmountOfContainers = 0;
+    public int maxAmountOfContainers = 15000;
     public Container(String flagNation, int draft, int length, int width, int containerCapacity){
         super(flagNation, draft, length, width);
         if (containerCapacity < 0) {
@@ -14,7 +14,7 @@ public class Container extends Vessel {
         this.containerCapacity = containerCapacity;
     }
 
-    boolean loadingCargo(int amountOfContainersToLoad){
+    public boolean loadingCargo(int amountOfContainersToLoad){
         if (amountOfContainersToLoad <= 0) {
             System.out.println("Not possible to load negative or zero containers. You said: " + amountOfContainersToLoad);
             System.out.println();

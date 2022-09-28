@@ -1,8 +1,8 @@
 package com.company;
 
 public class RoRo extends Vessel {
-    int carLenghtMeters = 8;
-    int truckLenghtMeters = 30;
+    public int carLengthMeters = 8;
+    public int truckLengthMeters = 30;
     int laneMeters;
 
     public RoRo(String flagNation, int draft, int length, int width, int laneMeters){
@@ -10,10 +10,10 @@ public class RoRo extends Vessel {
         this.laneMeters = laneMeters;
     }
 
-    int addedLengthToCargo = 0;
-    int amountOfCars = 0;
-    int amountOfTrucks = 0;
-    int totalAmountOfVehicles = 0;
+    public int addedLengthToCargo = 0;
+    public int amountOfCars = 0;
+    public int amountOfTrucks = 0;
+    public int totalAmountOfVehicles = 0;
 
     public boolean loadingCargo(String carOrTruck, int amountOfVehicles) {
         int addLength = 0;
@@ -22,9 +22,9 @@ public class RoRo extends Vessel {
             return false;
         }
         if (carOrTruck.equalsIgnoreCase("car")) {
-            addLength = 8;
+            addLength = carLengthMeters;
         } else if (carOrTruck.equalsIgnoreCase("truck")) {
-            addLength = 30;
+            addLength = truckLengthMeters;
         } else {
             System.out.println("Input not recognized: " + carOrTruck + " - can only load trucks or cars. Write in singular (car or truck)");
             return false;

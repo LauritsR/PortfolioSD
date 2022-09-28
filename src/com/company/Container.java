@@ -6,8 +6,8 @@ public class Container extends Vessel {
     public int maxAmountOfContainers = 15000;
     public Container(String flagNation, int draft, int length, int width, int containerCapacity){
         super(flagNation, draft, length, width);
-        if (containerCapacity < 0) {
-            throw new IllegalArgumentException("Cannot sail with a negative capacity of containers");
+        if (containerCapacity <= 0) {
+            throw new IllegalArgumentException("Cannot sail with a negative capacity or zero of containers");
         } else if (containerCapacity>maxAmountOfContainers) {
             throw new IllegalArgumentException("Cannot sail more than 15000 containers");
         }

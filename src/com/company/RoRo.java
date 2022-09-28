@@ -7,7 +7,12 @@ public class RoRo extends Vessel {
 
     public RoRo(String flagNation, int draft, int length, int width, int laneMeters){
         super(flagNation, draft, length, width);
-        this.laneMeters = laneMeters;
+        if (laneMeters == 0 || laneMeters < 0) {
+            throw new IllegalArgumentException("Number not allowed: " + laneMeters);
+        } else {
+            this.laneMeters = laneMeters;
+        }
+        System.out.println(laneMeters);
     }
 
     public int addedLengthToCargo = 0;
@@ -29,7 +34,7 @@ public class RoRo extends Vessel {
             System.out.println("Input not recognized: " + carOrTruck + " - can only load trucks or cars. Write in singular (car or truck)");
             return false;
         }
-        if (addLength*amountOfVehicles < laneMeters && addedLengthToCargo < laneMeters) {
+        if (addLength*amountOfVehicles <= laneMeters && addedLengthToCargo < laneMeters) {
             System.out.println("Loading " + amountOfVehicles + " " + carOrTruck.toLowerCase() + "s");
             addedLengthToCargo += addLength*amountOfVehicles;
             System.out.println("There is added " + addedLengthToCargo + "m of vehicles");

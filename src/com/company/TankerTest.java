@@ -72,7 +72,7 @@ public class TankerTest {
     // So I'm testing the superclass constructor in my tanker class
 
     @Test
-    void returnsFalseWhenArrayIndexOutOfBoundsExceptionTryingToFillOutOfArrayAndItsCaught(){
+    void returnsFalseWhenArrayIndexOutOfBoundsExceptionTryingToFillOutOfArrayAndIsCaught(){
         Tanker tanker = new Tanker("Denmark", 10, 10, 10, 5);
         assertFalse(tanker.loadingCargo(6,100));
     }

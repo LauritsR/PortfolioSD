@@ -3,12 +3,12 @@ package com.company;
 public class Container extends Vessel {
     private int containerCapacity;
     private int loadedAmountOfContainers = 0;
-    private final int maxAmountOfContainers = 15000;
+    private final int MAX_AMOUNT_OF_CONTAINERS = 15000;
     public Container(String flagNation, int draft, int length, int width, int containerCapacity){
         super(flagNation, draft, length, width);
         if (containerCapacity <= 0) {
             throw new IllegalArgumentException("Cannot sail with a negative capacity or zero of containers");
-        } else if (containerCapacity>maxAmountOfContainers) {
+        } else if (containerCapacity>MAX_AMOUNT_OF_CONTAINERS) {
             throw new IllegalArgumentException("Cannot sail more than 15000 containers");
         }
         this.containerCapacity = containerCapacity;

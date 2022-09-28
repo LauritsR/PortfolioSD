@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Tanker extends Vessel {
     private int[] amountOfCompartmentsList;
-    private final int maxLitersOfLiquid = 1000000;
+    private final int MAX_AMOUNT_OF_LIQUID = 1000000;
     public Tanker(String flagNation, int draft, int length, int width, int amountOfCompartments){
         super(flagNation, draft, length, width);
         if (amountOfCompartments > 10 || amountOfCompartments <= 0) {
@@ -26,12 +26,12 @@ public class Tanker extends Vessel {
                 System.out.println("Not possible to fill 0 or a negative amount of liquid. You said " + amountOfLiquid);
                 System.out.println();
                 return false;
-            } else if (amountOfCompartmentsList[whichTank] == maxLitersOfLiquid) {
+            } else if (amountOfCompartmentsList[whichTank] == MAX_AMOUNT_OF_LIQUID) {
                 System.out.println("Tank " + (whichTank+1) + " is already filled");
                 System.out.println();
                 return false;
             }
-            if (amountOfCompartmentsList[whichTank] != maxLitersOfLiquid && amountOfLiquid + amountOfCompartmentsList[whichTank] < maxLitersOfLiquid+1) {
+            if (amountOfCompartmentsList[whichTank] != MAX_AMOUNT_OF_LIQUID && amountOfLiquid + amountOfCompartmentsList[whichTank] < MAX_AMOUNT_OF_LIQUID+1) {
                 amountOfCompartmentsList[whichTank] += amountOfLiquid;
                 System.out.println("*filling " + amountOfLiquid + "L*");
                 System.out.println("Tank " + (whichTank + 1) + " is filled with " + amountOfCompartmentsList[whichTank] + "L");
@@ -39,7 +39,7 @@ public class Tanker extends Vessel {
                 return true;
             } else {
                 System.out.println("Not possible to fill " + amountOfLiquid + "L in the tank. Current amount of liquid is " + amountOfCompartmentsList[whichTank] + "L" );
-                System.out.println("Remaining space is: " + (maxLitersOfLiquid - amountOfCompartmentsList[whichTank]) + "L");
+                System.out.println("Remaining space is: " + (MAX_AMOUNT_OF_LIQUID - amountOfCompartmentsList[whichTank]) + "L");
                 System.out.println();
                 return false;
             }
@@ -58,7 +58,7 @@ public class Tanker extends Vessel {
         System.out.println("Getting the statistics from the tanker from " + flagNation + " which has " + amountOfCompartmentsList.length + " tanks");
         for (int i = 0; i < amountOfCompartmentsList.length; i++) {
             if (amountOfCompartmentsList[i] != 0) {
-                double percentage = ((double) amountOfCompartmentsList[i] / maxLitersOfLiquid) * 100;
+                double percentage = ((double) amountOfCompartmentsList[i] / MAX_AMOUNT_OF_LIQUID) * 100;
                 System.out.println("Tank " + (i + 1) + " is filled with " + amountOfCompartmentsList[i] + "L." + " Which is " + percentage + "% filled");
                 totalAmountOfLiquid += amountOfCompartmentsList[i];
                 filledTanks += 1;
@@ -71,9 +71,9 @@ public class Tanker extends Vessel {
             }
         }
         System.out.println();
-        System.out.println("The max amount of liquid allowed per tank is " + maxLitersOfLiquid);
-        System.out.println("There is " + totalAmountOfLiquid + "L filled out of " + (maxLitersOfLiquid*amountOfCompartmentsList.length) + "L available space");
-        double percentageAllTanks = ((double) totalAmountOfLiquid / (maxLitersOfLiquid*amountOfCompartmentsList.length)) * 100;
+        System.out.println("The max amount of liquid allowed per tank is " + MAX_AMOUNT_OF_LIQUID);
+        System.out.println("There is " + totalAmountOfLiquid + "L filled out of " + (MAX_AMOUNT_OF_LIQUID*amountOfCompartmentsList.length) + "L available space");
+        double percentageAllTanks = ((double) totalAmountOfLiquid / (MAX_AMOUNT_OF_LIQUID*amountOfCompartmentsList.length)) * 100;
         System.out.println("The tanker is in total filled " + percentageAllTanks + "%");
         System.out.println(((double) filledTanks / amountOfCompartmentsList.length * 100) + "% of the tanks have liquid");
         System.out.println();

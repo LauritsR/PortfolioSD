@@ -2,7 +2,7 @@ package com.company;
 
 public abstract class Vessel {
     public String flagNation;
-    public float draft;
+    public int draft;
     public int length;
     public int width;
     public Vessel(String flagNation, int draft, int length, int width) {

@@ -27,6 +27,7 @@ public class Main {
         roroOne.loadingCargo("truck", 2);
         roroOne.loadingCargo("truck", -2);
         roroOne.loadingCargo("truck", 0);
+        roroOne.loadingCargo("bob", 2);
         roroOne.utilityLevelOfCapacity();
 
         Container containerTwo = new Container("Denmark", 10,10,10,266);
@@ -41,3 +42,7 @@ public class Main {
 
     }
 }
+
+// used material
+// https://www.youtube.com/watch?v=vZm0lHciFsQ
+// exception throw

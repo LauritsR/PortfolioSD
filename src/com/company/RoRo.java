@@ -32,6 +32,8 @@ public class RoRo extends Vessel {
         if (addLength*amountOfVehicles < laneMeters && addedLengthToCargo < laneMeters) {
             System.out.println("Loading " + amountOfVehicles + " " + carOrTruck.toLowerCase() + "s");
             addedLengthToCargo += addLength*amountOfVehicles;
+            System.out.println("There is added " + addedLengthToCargo + "m of vehicles");
+            System.out.println();
             totalAmountOfVehicles += amountOfVehicles;
             if (carOrTruck.equalsIgnoreCase("car")) {
                 amountOfCars += amountOfVehicles;
@@ -52,5 +54,6 @@ public class RoRo extends Vessel {
         System.out.println("Amount of cars is " + amountOfCars);
         System.out.println("Amount of trucks is " + amountOfTrucks);
         System.out.println("The RoRo is filled " + ((double) addedLengthToCargo / laneMeters * 100) + "%");
+        System.out.println();
     }
 }

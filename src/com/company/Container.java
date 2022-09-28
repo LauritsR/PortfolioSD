@@ -28,6 +28,7 @@ public class Container extends Vessel {
         } else {
             loadedAmountOfContainers += amountOfContainersToLoad;
             System.out.println("*Loading " + amountOfContainersToLoad + " container" + (amountOfContainersToLoad==1? "" : "s") + "*");
+            System.out.println("There is loaded " + loadedAmountOfContainers + " container" + (amountOfContainersToLoad==1? "" : "s") + " in total");
             System.out.println();
             return true;
         }

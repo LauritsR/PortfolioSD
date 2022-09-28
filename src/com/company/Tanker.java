@@ -72,7 +72,7 @@ public class Tanker extends Vessel {
         }
         System.out.println();
         System.out.println("The max amount of liquid allowed per tank is " + maxLitersOfLiquid);
-        System.out.println("There is " + totalAmountOfLiquid + "L out of " + (maxLitersOfLiquid*amountOfCompartmentsList.length) + "L available space");
+        System.out.println("There is " + totalAmountOfLiquid + "L filled out of " + (maxLitersOfLiquid*amountOfCompartmentsList.length) + "L available space");
         double percentageAllTanks = ((double) totalAmountOfLiquid / (maxLitersOfLiquid*amountOfCompartmentsList.length)) * 100;
         System.out.println("The tanker is in total filled " + percentageAllTanks + "%");
         System.out.println(((double) filledTanks / amountOfCompartmentsList.length * 100) + "% of the tanks have liquid");

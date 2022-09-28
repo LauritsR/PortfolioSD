@@ -3,8 +3,8 @@ package com.company;
 import java.util.Arrays;
 
 public class Tanker extends Vessel {
-    public int[] amountOfCompartmentsList;
-    public int maxLitersOfLiquid = 1000000;
+    private int[] amountOfCompartmentsList;
+    private final int maxLitersOfLiquid = 1000000;
     public Tanker(String flagNation, int draft, int length, int width, int amountOfCompartments){
         super(flagNation, draft, length, width);
         if (amountOfCompartments > 10 || amountOfCompartments <= 0) {

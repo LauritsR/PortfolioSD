@@ -1,9 +1,13 @@
 package com.company;
 
 public class RoRo extends Vessel {
-    public int carLengthMeters = 8;
-    public int truckLengthMeters = 30;
-    int laneMeters;
+    private final int carLengthMeters = 8;
+    private final int truckLengthMeters = 30;
+    private int laneMeters;
+    private int addedLengthToCargo = 0;
+    private int amountOfCars = 0;
+    private int amountOfTrucks = 0;
+    private int totalAmountOfVehicles = 0;
 
     public RoRo(String flagNation, int draft, int length, int width, int laneMeters){
         super(flagNation, draft, length, width);
@@ -15,10 +19,7 @@ public class RoRo extends Vessel {
         System.out.println(laneMeters);
     }
 
-    public int addedLengthToCargo = 0;
-    public int amountOfCars = 0;
-    public int amountOfTrucks = 0;
-    public int totalAmountOfVehicles = 0;
+
 
     public boolean loadingCargo(String carOrTruck, int amountOfVehicles) {
         int addLength = 0;

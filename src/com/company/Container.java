@@ -1,9 +1,9 @@
 package com.company;
 
 public class Container extends Vessel {
-    public int containerCapacity;
-    public int loadedAmountOfContainers = 0;
-    public int maxAmountOfContainers = 15000;
+    private int containerCapacity;
+    private int loadedAmountOfContainers = 0;
+    private final int maxAmountOfContainers = 15000;
     public Container(String flagNation, int draft, int length, int width, int containerCapacity){
         super(flagNation, draft, length, width);
         if (containerCapacity <= 0) {

@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-/*
         Tanker tankerOne = new Tanker("bob", 10, 10, 10, 10);
         tankerOne.loadingCargo(0, 1000);
         tankerOne.loadingCargo(0, 5000);
@@ -37,8 +36,6 @@ public class Main {
         containerTwo.loadingCargo(-2);
         containerTwo.loadingCargo(0);
         containerTwo.utilityLevelOfCapacity();
-    */
-        RoRo roroOne = new RoRo("Denmark", 10, 10,10,-2);
 
 
 

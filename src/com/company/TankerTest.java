@@ -71,6 +71,12 @@ public class TankerTest {
     // It's not possible to create a vessel object since it's abstract
     // So I'm testing the superclass constructor in my tanker class
 
+    @Test
+    void returnsFalseWhenArrayIndexOutOfBoundsExceptionTryingToFillOutOfArrayAndItsCaught(){
+        Tanker tanker = new Tanker("Denmark", 10, 10, 10, 5);
+        assertFalse(tanker.loadingCargo(6,100));
+    }
+
 
     @Test
     void throwsExceptionWhenZeroCompartments(){

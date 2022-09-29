@@ -18,7 +18,7 @@ public abstract class Vessel {
         this.width = width;
     }
 
-    abstract public void utilityLevelOfCapacity();
+    abstract public double utilityLevelOfCapacity();
 
     // The reason loading cargo is not set here, is because it takes different parameters
 

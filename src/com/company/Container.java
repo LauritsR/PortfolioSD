@@ -34,9 +34,11 @@ public class Container extends Vessel {
         }
     }
     @Override
-    public void utilityLevelOfCapacity() {
+    public double utilityLevelOfCapacity() {
         System.out.println("Getting info from container ship from " + flagNation);
         System.out.println("The ship is loaded with " + loadedAmountOfContainers + " containers out of " + containerCapacity + " containers");
-        System.out.println("The ship is filled " + ((double) loadedAmountOfContainers / containerCapacity * 100) + "%");
+        double utilityLevelOfCapacity = ((double) loadedAmountOfContainers / containerCapacity * 100);
+        System.out.println("The ship is filled " + utilityLevelOfCapacity + "%");
+        return utilityLevelOfCapacity;
     }
 }

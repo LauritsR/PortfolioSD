@@ -52,7 +52,7 @@ public class Tanker extends Vessel {
 
     };
     @Override
-    public void utilityLevelOfCapacity() {
+    public double utilityLevelOfCapacity() {
         int totalAmountOfLiquid = 0;
         int filledTanks = 0;
         System.out.println("Getting the statistics from the tanker from " + flagNation + " which has " + amountOfCompartmentsList.length + " tanks");
@@ -75,7 +75,9 @@ public class Tanker extends Vessel {
         System.out.println("There is " + totalAmountOfLiquid + "L filled out of " + (MAX_AMOUNT_OF_LIQUID*amountOfCompartmentsList.length) + "L available space");
         double percentageAllTanks = ((double) totalAmountOfLiquid / (MAX_AMOUNT_OF_LIQUID*amountOfCompartmentsList.length)) * 100;
         System.out.println("The tanker is in total filled " + percentageAllTanks + "%");
-        System.out.println(((double) filledTanks / amountOfCompartmentsList.length * 100) + "% of the tanks have liquid");
+        double utilityLevelOfCapacity = ((double) filledTanks / amountOfCompartmentsList.length * 100);
+        System.out.println(utilityLevelOfCapacity + "% of the tanks have liquid");
         System.out.println();
+        return utilityLevelOfCapacity;
     }
 }

@@ -53,13 +53,15 @@ public class RoRo extends Vessel {
         }
     }
     @Override
-    public void utilityLevelOfCapacity() {
+    public double utilityLevelOfCapacity() {
         System.out.println("The RoRo from "+ flagNation);
         System.out.println("total length loaded " + addedLengthToCargo + "m");
         System.out.println("total amount of vehicles " + totalAmountOfVehicles);
         System.out.println("Amount of cars is " + amountOfCars);
         System.out.println("Amount of trucks is " + amountOfTrucks);
-        System.out.println("The RoRo is filled " + ((double) addedLengthToCargo / laneMeters * 100) + "%");
+        double utilityLevelOfCapacity = ((double) addedLengthToCargo / laneMeters * 100);
+        System.out.println("The RoRo is filled " + utilityLevelOfCapacity + "%");
         System.out.println();
+        return utilityLevelOfCapacity;
     }
 }

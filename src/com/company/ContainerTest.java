@@ -55,4 +55,17 @@ public class ContainerTest {
         Container containerTwo = new Container("Denmark", 10,10,10,1500);
         assertTrue(containerTwo.loadingCargo(150));
     }
+
+    @Test
+    void returnsZeroWhenNoContainersAreLoaded () {
+        Container containerTwo = new Container("Denmark", 10,10,10,1500);
+        assertEquals(0, containerTwo.utilityLevelOfCapacity());
+    }
+
+    @Test
+    void returnsFiftyWhenHalfOfContainerShipIsFilled () {
+        Container containerTwo = new Container("Denmark", 10,10,10,1500);
+        containerTwo.loadingCargo(750);
+        assertEquals(50, containerTwo.utilityLevelOfCapacity());
+    }
 }

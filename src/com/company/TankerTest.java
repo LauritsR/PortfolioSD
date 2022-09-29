@@ -123,6 +123,23 @@ public class TankerTest {
         tankerOne.loadingCargo(1, 1000000);
         assertFalse(tankerOne.loadingCargo(1, 1));
     }
+
+    @Test
+    void returnsZeroWhenNoTankIsFilled() {
+        Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+        assertEquals(0, tankerOne.utilityLevelOfCapacity());
+    }
+
+    @Test
+    void returns50When5TanksAreFilled() {
+        Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+        tankerOne.loadingCargo(0,100000);
+        tankerOne.loadingCargo(1,100000);
+        tankerOne.loadingCargo(2,100000);
+        tankerOne.loadingCargo(3,100000);
+        tankerOne.loadingCargo(4,100000);
+        assertEquals(50, tankerOne.utilityLevelOfCapacity());
+    }
   }
 
 

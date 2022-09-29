@@ -70,4 +70,17 @@ public class RoRoTest {
         RoRo RoRoOne = new RoRo("Denmark", 10, 10, 10, 80);
         assertFalse(RoRoOne.loadingCargo("car", -1));
     }
+
+    @Test
+    void returnsZeroWhenNoCarsAreFilled(){
+        RoRo RoRoOne = new RoRo("Denmark", 10, 10, 10, 80);
+        assertEquals(0, RoRoOne.utilityLevelOfCapacity());
+    }
+
+    @Test
+    void returnsFiftyWhenHalfOfRoRoIsFilled(){
+        RoRo RoRoOne = new RoRo("Denmark", 10, 10, 10, 160);
+        RoRoOne.loadingCargo("car", 10);
+        assertEquals(50, RoRoOne.utilityLevelOfCapacity());
+    }
 }

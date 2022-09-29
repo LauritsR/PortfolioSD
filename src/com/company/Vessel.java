@@ -1,5 +1,8 @@
 package com.company;
 
+import java.awt.*;
+import java.util.ArrayList;
+
 public abstract class Vessel {
     public String flagNation;
     public int draft;
@@ -22,4 +25,24 @@ public abstract class Vessel {
 
     // The reason loading cargo is not set here, is because it takes different parameters
 
+
+    // these next two are dummy text
+    // they retur null until next time
+    public Point getLocation(boolean notifyCustomers) {
+        if (notifyCustomers) {
+            System.out.println(notifyCustomers());
+        }
+        return null;
+    }
+
+    public ArrayList<String> listOfAvailableShips(boolean notifyCustomers){
+        if (notifyCustomers) {
+            System.out.println(notifyCustomers());
+        }
+        return null;
+    }
+
+    public String notifyCustomers(){
+        return "Hello customer";
+    }
 }

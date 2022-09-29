@@ -140,6 +140,25 @@ public class TankerTest {
         tankerOne.loadingCargo(4,100000);
         assertEquals(50, tankerOne.utilityLevelOfCapacity());
     }
+
+
+    // dummy tests
+    @Test
+    void getsLocationOfShip() {
+        Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+        assertNull(tankerOne.getLocation(false));
+    }
+
+    @Test
+    void getAvailableShips() {
+        Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+        assertNull(tankerOne.listOfAvailableShips(false));
+    }
+    @Test
+    void notifyCustomers(){
+        Tanker tankerOne = new Tanker("Denmark", 10, 10, 10, 10);
+        assertEquals("Hello customer",tankerOne.notifyCustomers());
+    }
   }
 
 

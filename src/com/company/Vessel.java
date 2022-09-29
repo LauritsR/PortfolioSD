@@ -26,8 +26,8 @@ public abstract class Vessel {
     // The reason loading cargo is not set here, is because it takes different parameters
 
 
-    // these next two are dummy text
-    // they retur null until next time
+    // these next three are dummy text
+    // they return null until next time
     public Point getLocation(boolean notifyCustomers) {
         if (notifyCustomers) {
             System.out.println(notifyCustomers());
